@@ -193,7 +193,7 @@ section.veiculos-destaque .container{
 }
 
 .imagem{
-	background-image:url('imagens/carro1.jpg');
+	background-image:url('../imagens/carro1.jpg');
 }
 
 .vitrine-destaque .carro-img{
