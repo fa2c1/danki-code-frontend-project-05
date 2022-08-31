@@ -26,6 +26,10 @@ header{
 	height: 130px;
 }
 
+.modificado{
+	border-bottom: 3px solid #EB2D2D;
+}
+
 header div.logo{
 	float: left;
 }
@@ -82,8 +86,12 @@ header nav.desktop ul li{
 }
 
 header nav.desktop a{
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
+}
+
+.link-ativo{
+	color:#EB2D2D;
 }
 
 /**Section Banner**/
@@ -181,6 +189,11 @@ section.veiculos-destaque .container{
 .vitrine-destaque{
 	float: left;
 	width: 33.3%;
+	text-align: left;	
+}
+
+.imagem{
+	background-image:url('imagens/carro1.jpg');
 }
 
 .vitrine-destaque .carro-img{
@@ -308,12 +321,12 @@ section.veiculos-destaque .container{
 
 /**Section Contatos**/
 section.contato{
-	padding:80px 2%;
+	padding:80px 2% 0 2%;
 }
 
 section.contato form{
 	max-width: 600px;
-	margin:50px auto;
+	margin:30px auto;
 }
 
 section.contato .input-wraper{
@@ -325,15 +338,17 @@ section.contato .input-wraper{
 section.contato input[type=text]{
 	width: 100%;
 	border: 1px solid #ccc;
-	height: 40px;
+	height: 60px;
+	font-size: 16px;
 	line-height: 40px;
 	padding-left: 15px;
 }
 
 section.contato textarea{
+	font-size: 16px;
 	width: 100%;
 	border:1px solid #ccc;
-	height: 120px;
+	height: 140px;
 	padding:8px;
 	resize: none;
 }
@@ -392,6 +407,15 @@ footer p{
 }
 
 /**Vendas**/
+section.venda{
+	padding:90px 2%;
+	min-height: 90%;
+}
+
+.content-venda{
+	margin-top:40px;
+}
+
 .sidebar{
 	float: left;
 	width: 30%;
@@ -517,16 +541,17 @@ footer p{
 
 /**Detalhes do veiculo**/
 section.venda-single{
-	padding:0 2%;
+	padding:80px 2% 0 2%;
 }
 
 section.venda-single .container{
-	padding:40px 0;
-	max-width: 1000px;
+	padding:40px 0 0 0;
+	text-align: center;
+	max-width: 1280px;
 }
 
 .info-veiculo{
-	float: left;
+	display: inline-block;
 	width: 60%;
 }
 
@@ -534,47 +559,157 @@ section.venda-single .container{
 	width: 100%;
 	padding-top:70%;
 	background-position: center;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .descricao-veiculo{
-	float: left;
-	width: 40%;
-	padding:20px;
+	vertical-align: top;
+	display: inline-block;
+	padding:60px 20px;
+	text-align: left;
 }
 
 .descricao-veiculo p{
+	font-size: 17px;
 	margin-top:25px;
-	max-width: 360px;
+	max-width: 200px;
 }
 
 .descricao-veiculo a{
 	margin-top:25px;
 }
 
-.nav-galeria{
+.nav-galeria-parent{
 	width: 100%;
-	padding:15px;
+	padding:36px;
+	position: relative;
+}
+
+.arrow-left-nav{
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	cursor: pointer;
+	transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	background-image:url('../imagens/arrow-left.png');
+	background-size: 100% 100%;
+	width: 22px;
+	height: 22px;
+}
+
+.arrow-right-nav{
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	cursor: pointer;
+	transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	background-image:url('../imagens/arrow-right.png');
+	background-size: 100% 100%;
+	width: 22px;
+	height: 22px;
+}
+
+.info-bread{
+	padding:20px 0;
+	text-align: left;
+}
+
+.info-bread a{
+	text-decoration: none;
+	color: black;
+}
+
+.info-bread a:last-child{
+	color: red;
+}
+
+.info-bread span{
+	padding:0 30px;
+}
+
+.nav-galeria{
 	overflow: hidden;
-	margin-top:15px;
+	width: 100%;
 }
 
 .nav-galeria-wraper{
 	width: 200%;
 }
 
-.mini-img{
+.estilo{
+	background-color:rgb(210,210,210);
+}
+
+.mini-img-wraper{
 	float: left;
-	border:7px solid white;
+	padding:9px;
+	width:calc(33.3% * (100 / 200));
+}
+
+.mini-img{
+	width: 100%;
+	cursor: pointer;
+	padding-top:70%;
 	background-position: center;
 	background-size: cover;
-	padding-top:calc(33.3% * (100 / 200) * 0.6);
-	width:calc(33.3% * (100 / 200));
+	background-color:green;
+}
+
+/**Sobre**/
+section.sobre{
+	min-height: 90%;
+	padding:60px 2% 20px 2%;
+}
+
+section.sobre .container{
+	max-width: 840px;
+	margin-top:30px;
+}
+
+section.sobre .img-destaque-sobre{
+	width: 100%;
+	padding-top:60%;
+	background-color: rgb(220,220,220);
+}
+
+section.sobre .descricao-autor{
+	margin-top:20px;
+}
+
+.descricao-autor h2{
+	font-size: 24px;
+}
+
+.descricao-autor p{
+	line-height: 28px;
+	font-size: 16px;
+	margin-top:10px;
+}
+
+.descricao-autor2{
+	margin-top:40px;
+}
+
+.img-small{
+	width: 30%;
+	padding-top:30%;
+	float: left;
+	background-color: rgb(220,220,220);
+}
+
+.descricao-autor2 p{
+	float: left;
+	width: 70%;
+	line-height: 28px;
+	padding:15px;
 }
 
 /**Responsivo**/
 @media screen and (max-width: 1100px){
+
 	.half1{
 		text-align: center;
 	}
@@ -637,8 +772,7 @@ section.venda-single .container{
 		height: 80vh;
 	}
 
-	nav.desktop
-	{
+	nav.desktop{
 		display: none;
 	}
 
@@ -663,6 +797,23 @@ section.venda-single .container{
 	.vitrine-venda{
 		text-align: center;
 		width: 100%;
+	}
+
+	.info-veiculo{
+		width: 100%;
+	}
+
+	.descricao-veiculo{
+		padding:20px 0;
+		text-align: center;
+	}
+
+	.descricao-veiculo a{
+		display: inline-block;
+	}
+
+	.descricao-veiculo p{
+		max-width: none;
 	}
 }
 
